@@ -133,19 +133,79 @@ system("cls");
 // Modulo 4: Struttura condizionale switch
 // Spiegazione: switch(valore) seleziona tra casi predefiniti, default se nessuno corrisponde.
 // ========================
+
+//int a = 10, b = 10;
+//char operazione = '+';
+//if(operazione == '+') {
+//	cout << a + b <<endl;
+//}else if (operazione == '-') {
+//	cout << a-b << endl;
+//}[...]
+
+//int a = 10, b = 10;
+//char operazione = '+';
+//
+//switch (operazione){
+//	case '+':
+//		cout << a + b <<endl;
+//		break;
+//	case '-':
+//		cout << a - b <<endl;
+//		break;
+//}
+
 /*
 Es. 4: Chiedi un numero 1-7 e stampa il giorno della settimana corrispondente.
 */
 
+int numGiorno;
+cout << "inserisci il numero del giorno (1-7)" << endl;
+//cin >> numGiorno;
+numGiorno = 6;
+switch (numGiorno) {
+	case 1:
+		cout << "Lunedi'";
+		break;
+	case 2:
+		cout << "Martedi'";
+		break;
+	case 3:
+		cout << "Mercoledi'";
+		break;
+	case 4:
+		cout << "Giovedi'";
+		break;
+	case 5:
+		cout << "Venerdi'";
+		break;
+	case 6:
+		cout << "Sabato";
+		break;
+	case 7:
+		cout << "Domenica";
+		break;
+	default:
+		cout << "Il numero del giorno non e' valido" << endl;
+		break;
+}
+
+system("cls");
+
 // ========================
 // Modulo 5: Cicli for, while, do..while
 // Spiegazione: for(inizio; condizione; incremento) = ciclo a conteggio
-// while(condizione) = ciclo che continua finché condizione vera
+// while(condizione) {...} = ciclo che continua finché condizione vera
 // do..while = esegue almeno una volta, poi controlla condizione
 // ========================
 /*
 Es. 5: Stampa i numeri da 1 a 10 usando for, while e do..while.
 */
+
+int i = 1;
+while(i<=10) {
+	cout << i << endl;
+	i++;
+}
 
 // ========================
 // Modulo 6: Array monodimensionale
