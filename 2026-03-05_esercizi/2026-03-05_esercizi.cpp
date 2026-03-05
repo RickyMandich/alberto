@@ -6,22 +6,70 @@ int main(){
 
 // ========================
 // Modulo 1: Tipi di dati e variabili
-// Spiegazione: int = numeri interi, float = numeri decimali, char = singolo carattere, bool = vero/falso.
+// Spiegazione: int = numeri interi, float = numeri decimali, double = numeri decimali più precisi, char = singolo carattere, bool = vero/falso.
 // Variabili = contenitori modificabili, costanti = valori fissi.
 // ========================
 /*
 Es. 1: Scrivi un programma che dichiari variabili di tutti i tipi sopra e stampi il loro contenuto.
 */
 
+// variabile contenente un numero intero
+int x;
+cout << "inserisci un numero intero" << endl;
+//cin >> x;
+x = 15;
+cout << x << endl << endl;
+
+// variabile contente un numero con la virgola
+float y;
+cout << "inserisci un numero decimale" << endl;
+// cin >> y;
+y = 1.5;
+cout << y << endl << endl;
+
+// variabile contente un carattere
+char character = '&';
+cout << character << endl << endl;
+
+// variabile contente un bool
+bool boolean = 5 < 10;
+cout << boolean << endl << endl;
+
+system("cls");
+
 // ========================
 // Modulo 2: Operazioni aritmetiche
-// Spiegazione: + somma, - sottrazione, * moltiplicazione, / divisione intera, % resto della divisione
+// Spiegazione: + somma, - sottrazione, * moltiplicazione, / divisione intera, % modulo (resto della divisione)
 // I booleani possono derivare da confronti tra variabili (>, <, ==, !=, >=, <=)
 // ========================
 /*
-Es. 2: Chiedi due numeri interi all'utente e calcola: somma, differenza, prodotto, divisione intera, resto.
+Es. 2: Chiedi due numeri interi all'utente e calcola:
+- somma
+- differenza
+- prodotto
+- divisione intera
+- resto
 Mostra anche se il primo è maggiore del secondo usando un booleano.
 */
+
+int int1, int2;
+int res1;
+cout << "inserisci due numeri interi (uno alla volta)" << endl;
+cin >> int1;
+cin >> int2;
+res1 = int1 + int2;
+cout << "num1 + num2 = " << res1 << endl;
+res1 = int1 - int2;
+cout << "num1 - num2 = " << res1 << endl;
+res1 = int1 * int2;
+cout << "num1 * num2 = " << res1 << endl;
+res1 = int1 / int2;
+cout << "num1 / num2 = " << res1 << endl;
+res1 = int1 % int2;
+cout << "num1 % num2 = " << res1 << endl;
+bool res2 = int1 > int2;
+cout << "num1 > num2 = " << res2 << endl;
+
 
 // ========================
 // Modulo 3: Struttura condizionale if
