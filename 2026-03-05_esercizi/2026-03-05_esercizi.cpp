@@ -55,8 +55,9 @@ Mostra anche se il primo è maggiore del secondo usando un booleano.
 int int1, int2;
 int res1;
 cout << "inserisci due numeri interi (uno alla volta)" << endl;
-cin >> int1;
-cin >> int2;
+int1 = 15, int2 = 5;
+//cin >> int1;
+//cin >> int2;
 res1 = int1 + int2;
 cout << "num1 + num2 = " << res1 << endl;
 res1 = int1 - int2;
@@ -70,15 +71,63 @@ cout << "num1 % num2 = " << res1 << endl;
 bool res2 = int1 > int2;
 cout << "num1 > num2 = " << res2 << endl;
 
+system("cls");
 
 // ========================
 // Modulo 3: Struttura condizionale if
 // Spiegazione: if() controlla una condizione; se vera esegue il blocco. if-else permette alternativa.
 // ========================
+int eta;
+if (eta > 18){
+	// puoi entrare a vedere il film
+} else if (eta > 16) {
+	// puoi entrare a vedere il film se vieni accompagnato da un adulto
+} else {
+	// non puoi vedere il film
+}
 /*
 Es. 3: Chiedi un voto (0-10) e stampa il giudizio:
-"Insufficiente" <6, "Sufficiente" 6-7, "Buono" 8-9, "Ottimo" 10.
+- "Insufficiente" <6
+- "Sufficiente" 6-7
+- "Buono" 8-9
+- "Ottimo" 10.
 */
+
+int voto;
+cout << "inserisci un voto tra 0 e 10" << endl;
+//cin >> voto;
+voto = 6;
+if (voto < 6) {
+	cout << "Insufficiente" << endl;
+} else if (voto <= 7) {
+	cout << "Sufficiente" <<endl;
+} else if (voto <= 9) {
+	cout << "Buono" << endl;
+} else {
+	cout << "Ottimo" << endl;
+}
+
+system("cls");
+/*
+Es. 3.5: rifai l'esercizio precedente preoccupandoti di gestire il fatto che l'utente può non aver rispettato i limiti numerici imposti:
+*/
+
+cout << "inserisci un voto tra 0 e 10" << endl;
+//cin >> voto;
+voto = 6;
+if (voto < 0 || voto > 10){
+	cout << "Voto non valido" << endl;
+} else if (voto < 6) {
+	cout << "Insufficiente" << endl;
+} else if (voto <= 7) {
+	cout << "Sufficiente" <<endl;
+} else if (voto <= 9) {
+	cout << "Buono" << endl;
+} else {
+	cout << "Ottimo" << endl;
+}
+
+system("cls");
 
 // ========================
 // Modulo 4: Struttura condizionale switch
