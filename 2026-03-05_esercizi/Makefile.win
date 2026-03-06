@@ -1,11 +1,11 @@
-# Project: 2026-03-05_esercizi
+# Project: progetto
 # Makefile created by Embarcadero Dev-C++ 6.3
 
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = 2026-03-05_esercizi.o
-LINKOBJ  = 2026-03-05_esercizi.o
+OBJ      = lezione.o esercizi-per-il-2026-03-06.o
+LINKOBJ  = lezione.o esercizi-per-il-2026-03-06.o
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -24,5 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-2026-03-05_esercizi.o: 2026-03-05_esercizi.cpp
-	$(CPP) -c 2026-03-05_esercizi.cpp -o 2026-03-05_esercizi.o $(CXXFLAGS)
+lezione.o: lezione.cpp
+	$(CPP) -c lezione.cpp -o lezione.o $(CXXFLAGS)
+
+esercizi-per-il-2026-03-06.o: esercizi-per-il-2026-03-06.cpp
+	$(CPP) -c esercizi-per-il-2026-03-06.cpp -o esercizi-per-il-2026-03-06.o $(CXXFLAGS)
