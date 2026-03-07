@@ -295,17 +295,85 @@ for(i=0;i<3;i++){
 for(int j=0;j<3;j++){
 	cout << "somma della colonna " << j + 1 << ":\t" << sumCol[j] << endl;
 }
-
+system("cls");
 // ========================
 // Modulo 8: Stringhe con vettore di char
 // Spiegazione: stringa = array di char terminato da '\0', strlen() restituisce lunghezza
 // ========================
+char aNum = 95;	//---------NO
+char aChar = 'A';	//---------Sì
+char parola[] = "123456789";
+//parola[5] = 'A'; // parola == [ 0:'C', 1:'i', 2:'a', 3:'o', 4:0, 5:'A'];
+cout << parola << ":\t" << strlen(parola) << endl; //String Length != lunghezza stringa
+for(int j=0;j<=strlen(parola);j++){
+	cout << (int)parola[j] << "\t";
+}
+cout << endl;
+for(int j=0;j<=strlen(parola);j++){
+	cout << parola[j] << "\t";
+}
+cout << endl;
+
+system("cls");
 /*
-Es. 8: Chiedi all'utente una parola, salvala in un array di char e stampala al contrario.
+Es. 8: Chiedi all'utente una parola
+salvala in un array di char
+stampala al contrario.
 */
 
+char par[20] = "Ciao";
+char parInvertita[20];
+cout << "inserisci una parola di massimo 255 caratteri" << endl;
+//cin >> par;
+//par = "Ciao";
+cout << "hai inserito:\t" << par << endl;
+// opt1: guardo l'array al contrario (int j=0;j<tot;j++) -> (int j=tot-1;j>=0;j--)
+// opt2: inverto l'array par == [ 0:'C', 1:'i', 2:'a', 3:'o', 4:0]; parInvertita == [ 0:'o', 1:'a', 2:'i', 3:'C', 4:0];
+for(int j=20-1, h=0;h<20;j--, h++){
+	parInvertita[h] = par[j];
+}
+cout << parInvertita << endl;
+system("cls");
+// un ISBN è composto da 13 cifre ed è verificato quando:
+// la somma delle cifre in posizione dispari +
+// il triplo della somma delle crifre in posizione pari
+// è divisibile per 10
+
+// somma dispari + (somma pari * 3) % 10 == 0
+    
+    long long isbn = 0;
+    int sommaPari = 0, sommaDis = 0;
+    cout << "Inseriesci un ISBN di 13 cifre:" << endl;
+    cin >> isbn;
+    cout << "il tuo ISBN:" << isbn <<endl;
+    
+    for (int i=13; isbn != 0; i--)
+    {
+        if (i % 2 == 0)
+        {
+        	cout << "somma pari prima:\t" << sommaPari;
+        	cout << "\tcifra in considerazione:\t" << isbn%10;
+        	cout << "\tisbn:\t" << isbn;
+            sommaPari = sommaPari + isbn%10;
+        	cout << "somma pari dopo:\t" << sommaPari;
+        }else{
+        	cout << "somma dispari prima:\t" << sommaDis;
+        	cout << "\tcifra in considerazione:\t" << isbn%10;
+        	cout << "\tisbn:\t" << isbn;
+        	sommaDis = sommaDis + isbn%10;
+        	cout << "\tsomma dispari dopo:\t" << sommaDis;
+		}
+		cout << endl << endl;
+		isbn/=10;
+    }
+    if((sommaDis + (sommaPari * 3)) % 10 == 0){
+    	cout << "ISBN valido" << endl;
+	}else{
+		cout << "ISBN non valido" << endl;
+	}
+
 // ========================
-// Modulo 9: funzioni e parametri
+// Modulo 9 (Facoltativo): funzioni e parametri
 // Spiegazione: <tipo> <nome funzione> (<tipo parametro> <nome parametro>[, ...]){...}
 // ========================
 /*
